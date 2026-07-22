@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Syne", sans-serif;
+  --font-mono: "Space Grotesk", sans-serif;
+  
+  --color-brand-black: #050505;
+  --color-brand-dark: #0a0a0a;
+  --color-electric-blue: #004cff;
+  --color-neon-cyan: #00f0ff;
+  --color-purple-glow: #bd00ff;
+}
+
+@layer base {
+  body {
+    background-color: #050505;
+    color: #f3f4f6;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+  
+  /* Selection */
+  ::selection {
+    background: rgba(0, 76, 255, 0.4);
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+  }
+  
+  .border-glow {
+    box-shadow: 0 0 15px rgba(189, 0, 255, 0.15);
+  }
+  
+  .glass-card {
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1f1f1f;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #004cff;
+  }
+}
